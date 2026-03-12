@@ -14,3 +14,8 @@ bash install.sh
 ```
 
 that's it. 
+
+# Usage
+For some fucking reason UDEV wouldn't work, so you have to press Start > Options > Tools > 0FixAICWifi every time you connect it. Sorry.
+
+Also you might need to use a terminal to install `usb_modeswitch` but I think that was installed already.
