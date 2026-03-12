@@ -46,20 +46,33 @@ EOF'
 
 # ---------------------------
 
-# Create udev rule for usb_modeswitch
+# DONT Create udev rule for usb_modeswitch because it doesnt fucking work
 
 # ---------------------------
 
-echo "Creating udev rule..."
+#echo "Creating udev rule..."
 
-sudo bash -c 'cat > /etc/udev/rules.d/99-aic8800.rules <<EOF
-ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="a69c", ATTR{idProduct}=="5721", RUN+="/usr/sbin/usb_modeswitch -K -W -v a69c -p 5721"
-EOF'
+#sudo bash -c 'cat > /etc/udev/rules.d/99-aic8800.rules <<EOF
+#ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="a69c", ATTR{idProduct}=="5721", RUN+="/usr/sbin/usb_modeswitch -K -W -v a69c -p 5721"
+#EOF'
 
 # Reload udev rules
 
-sudo udevadm control --reload-rules
-sudo udevadm trigger
+#sudo udevadm control --reload-rules
+#sudo udevadm trigger
+
+# ---------------------------
+
+# DO make a shell script to run usbms manually 
+
+# ---------------------------
+
+cat > /roms/tools/0FixAICWifi.sh <<EOF
+#!/bin/bash
+sudo /usr/sbin/usb_modeswitch -K -W -v a69c -p 5721
+EOF
+
+chmod +x /roms/tools/0FixAICWifi.sh
 
 # ---------------------------
 
