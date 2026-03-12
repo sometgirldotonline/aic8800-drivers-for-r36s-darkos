@@ -3,6 +3,7 @@
 
 (i call it vibe compiled because i had the tiniest clue of what i was doing, i was heavily relying on chatGPT)
 
+built from: https://github.com/shenmintao/aic8800d80
 
 # Installation
 
