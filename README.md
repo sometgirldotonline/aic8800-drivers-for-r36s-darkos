@@ -9,6 +9,7 @@ built from: https://github.com/shenmintao/aic8800d80
 
 ```bash
 git clone https://github.com/sometgirldotonline/aic8800-drivers-for-r36s-darkos aicdriver
+cd aicdriver
 bash install.sh
 ```
 
